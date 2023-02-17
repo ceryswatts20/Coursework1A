@@ -42,7 +42,3 @@ bode(plant, reducedOrder, w)
 title('Bode Plot for Plant and Reduced 2nd Order Model')
 legend
 grid on
-
-% Get gain margin, phase margin and crossover frequencies
-[Gm,Pm,Wcg,Wcp] = margin(plant)
-[Gm2,Pm2,Wcg2,Wcp2] = margin(reducedOrder)
