@@ -78,7 +78,8 @@ K = 1.49;
 phaseNum = [K 2*K];
 phaseDen = [1 6];
 phase = tf(phaseNum, phaseDen);
-compPlantD = plantOLTF*phase
+plantOLTFd = zpk(zeros, poles, K)
+compPlantD = plantOLTFd * phase
 % Converts OLTF to CLTF - compPlant = OLTF, 1 = H(s) (1 as it's unity feedback
 % control)
 compPlantCLTFd = feedback(compPlantD, 1)
